@@ -8,7 +8,7 @@
 1. run the command line below in root folder.
 
 ```sh
-npx tchitos-prettier
+npx @tchitos/prettier
 ```
 
 2. And Voila it's all done
