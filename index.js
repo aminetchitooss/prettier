@@ -13,7 +13,6 @@ const sleep = (ms = 2000) => new Promise(r => setTimeout(r, ms));
 async function welcome() {
   console.log(`
     ${chalk.bgCyan('Welcome to our prettier setup')} 
-    If you get any question wrong I will be ${chalk.bgRed('killed')}
   `);
 }
 
@@ -21,7 +20,7 @@ async function start() {
   const answers = await inquirer.prompt({
     name: 'default_setup',
     type: 'list',
-    message: 'Which setup would you like?\n',
+    message: 'Which setup would you like ?\n',
     choices: ['Standard (Full)', 'Custom']
   });
 
@@ -57,7 +56,7 @@ async function askPrintWidth() {
   const answers = await inquirer.prompt({
     name: 'print_width',
     type: 'input',
-    message: 'How many characters untill line break?',
+    message: 'How many characters untill line break ?',
     default() {
       return 100;
     }
@@ -70,7 +69,7 @@ async function askTabWidth() {
   const answers = await inquirer.prompt({
     name: 'tab_width',
     type: 'input',
-    message: 'Whats the size of tab indentation?',
+    message: 'Whats the size of tab indentation ?',
     default() {
       return 2;
     }
@@ -83,7 +82,7 @@ async function createIgnoreFile() {
   const answers = await inquirer.prompt({
     name: 'should_ignore_file_be_created',
     type: 'list',
-    message: 'Would you like to add .prettierignore file?\n',
+    message: 'Would you like to add .prettierignore file and format all files ?\n',
     choices: ['Yes', 'No']
   });
 
@@ -94,7 +93,7 @@ async function setFormatOnSave() {
   const answers = await inquirer.prompt({
     name: 'should_format_on_save',
     type: 'list',
-    message: 'Would you like to format on save?\n',
+    message: 'Would you like to format on save ?\n',
     choices: ['Yes', 'No']
   });
 
@@ -156,7 +155,8 @@ function endProcess() {
     console.log(gradient.pastel.multiline(data) + '\n');
 
     console.log(
-      chalk.green(`Coding ain't about knowledge; it's about making the command line look cool`)
+      chalk.green(`Coding ain't about knowledge; it's about making the command line look cool
+      `)
     );
     process.exit(0);
   });
